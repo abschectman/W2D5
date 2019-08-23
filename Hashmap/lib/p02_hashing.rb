@@ -4,6 +4,12 @@ end
 
 class Array
   def hash
+    string = ""
+    self.flatten.each do |el|
+      string += el.hash.abs.to_s
+    end
+    string.to_i
+   
   end
 end
 
